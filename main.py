@@ -23,7 +23,6 @@ class MyBackground(model.Background):
         allp=plugin.listall(repository_nid)# get a list of all plugins aviable in the repo
         self.components.List1.items=allp#update List1 with the list
     def on_load_mouseClick(self,event):
-        print("w")
         a=open("nidlist.tmp","r")# open saved nids(presaved result of plugin.listall())
         b=a.readlines()
         a=plugin.get_nid_by_name(b,self.components.List1.stringSelection) # get nid by using the selection in List1
