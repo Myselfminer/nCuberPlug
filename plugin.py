@@ -66,10 +66,9 @@ def get_nid_by_name(nids_list, name):
             return i
 def get_local_nids():
     nids=[]
-    a=os.listdir("/prop")#read the props
+    a=os.listdir(os.getcwd()+"/prop")#read the props
     for i in a:
-        a=open("i","r")
+        a=open(os.getcwd()+"/prop/"+i,"r")
         b=a.readlines()
         nids.append(b[0])
     return nids
-    
